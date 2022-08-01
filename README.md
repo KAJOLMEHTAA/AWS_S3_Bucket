@@ -1,6 +1,6 @@
-##Check for Bucket Size more than 1GB and send out Email on Monthly Basis
+# Check for Bucket Size more than 1GB and send out Email on Monthly Basis
 
-#Introduction
+## Introduction
 Amazon S3 is object storage built to store and retrieve any amount of data from anywhere. It’s a simple storage service that offers industry leading durability, availability, performance,
 security, and virtually unlimited scalability at very low costs.
 In this Article, we will go through how we can receive email notifications for S3 Buckets whose size has reached 1GB or more.
