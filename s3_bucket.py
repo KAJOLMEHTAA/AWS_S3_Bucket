@@ -12,7 +12,6 @@ def lambda_handler(event,context):
     for bucket in response['Buckets']:
         Buckets.append(bucket["Name"])
 
-    #Buckets = ["advice-column-media","ai.bitcotapps.com","amplify-myamplifyapp-dev-125809-deployment","asec-wordpress","mayday-assets.bitcotapps.com","bitcot-old-db-backup","asec-mediabucket","marketplace.bitcotapps.com","memory.net-staging","robotics-wordpress","bitcotassets","ims-ecomm-demo","outside-allfiles"]
     count_dict = {}
     for name in Buckets:
         buckets = boto3.resource('s3').Bucket(name)
@@ -32,7 +31,7 @@ def lambda_handler(event,context):
     #default_region = os.environ['AWS_REGION']
     sns = boto3.client("sns", region_name="us-east-1")
     sns.publish(
-          TopicArn="arn:aws:sns:us-east-1:686878367233:BucketList",
+          TopicArn="",  #TopicARN
           Message=json.dumps(c), 
-          Subject="Bucket List above 1GB"
+          Subject="Bucket List above 1GB"   #Email Subject
         )
