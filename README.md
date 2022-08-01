@@ -21,4 +21,4 @@ The following are the steps to follow to set Email Notifications:
 
 2. SNS Topic:
       * Open SNS Topic Console, Create Topic
-      * Under the Topic Create Subscription, Protocol as Email and Specify the Email ID where you want to receive notification for Instance expiration, in Endpoint.
+      * Under the Topic Create Subscription, Protocol as Email and Specify the Email ID where you want to receive notification for S3 size>1GB, in Endpoint.
